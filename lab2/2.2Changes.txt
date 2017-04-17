@@ -1,0 +1,40 @@
+N i K stałe
+value w GraphVertex typu NodeType
+generate_random_graph:
+  Uzupełnianie zerami lub jedynkami w zależności od stopnia zapełnienia grafu
+  użycie zeros i ones
+generate_random_nodes:
+  dodanie typu abstrakcyjnego NodeType jako elementów Vectora
+
+convert_to_graph:
+  nadanie typu jednemu argumentowi
+
+partition:
+  dodanie typów elementów zbiorów
+
+bfs:
+  dodanie typów argumentów
+  dodanie typu tablicy q
+  dodanie typu elementów zbioru
+
+graph_to_str:
+  dodanie 2 metod jednej funkcji
+  konkatenacja stringów w jednej linijce
+
+Przykładowe wyniki uruchomienia
+OLD VERSION:
+  1. generate_random_graph: 0.185326 seconds (1.13 M allocations: 32.360 MB, 4.87% gc time)
+  2. generate_random_nodes:   0.000474 seconds (3.78 k allocations: 168.750 KB)
+  3. convert_to_graph:   0.033469 seconds (12.26 k allocations: 3.176 MB)
+  4. graph_to_str:   0.093322 seconds (21.09 k allocations: 94.997 MB, 28.67% gc time)
+  5. check_euler:   0.002444 seconds (11.55 k allocations: 391.742 KB)
+
+NEW VERSION:
+1. generate_random_graph:   0.005269 seconds (15 allocations: 5.101 MB)
+2. generate_random_nodes:   0.000247 seconds (2.43 k allocations: 136.266 KB)
+3. convert_to_graph:   0.028507 seconds (12.41 k allocations: 3.180 MB)
+4. graph_to_str:   0.029966 seconds (15.99 k allocations: 32.190 MB, 35.90% gc time)
+5. check_euler:   0.001720 seconds (8.08 k allocations: 337.461 KB)
+
+Można zauważyć dużą oszczędność czasu we wszystkich funkcjach oraz
+oszczędność pamięci w 1,2,4 i 5 funkcji
