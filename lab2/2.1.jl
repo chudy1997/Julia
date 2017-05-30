@@ -10,7 +10,8 @@ function foo2()
   end
 end
 
-#dla delay w granicach 0.00001-1.0 wyniki zachowują proporcję, natomiast w górę i w dół wyniki zaczynają odstawać od proporcji
+#dla delay w granicach 0.0001-1.0 wyniki zachowują proporcję, natomiast w górę i w dół wyniki zaczynają odstawać od proporcji
+using ProfileView
 function profiler()
   foo1()
   foo2()
@@ -24,5 +25,6 @@ function profiler()
     print(del,'\n')
     Profile.print()
     del*=10
+    #ProfileView.view()
   end
 end
